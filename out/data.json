@@ -1,0 +1,69 @@
+{
+    "project": {},
+    "files": {
+        "RESTfulAPI.js": {
+            "name": "RESTfulAPI.js",
+            "modules": {},
+            "classes": {
+                "RESTfulAPI": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "RESTfulAPI": {
+            "name": "RESTfulAPI",
+            "shortname": "RESTfulAPI",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "RESTfulAPI.js",
+            "line": 1,
+            "description": "RESTfulAPI\n\t<br />\n\t<br />nodejs restful api 练习程序。"
+        }
+    },
+    "elements": {},
+    "classitems": [
+        {
+            "file": "RESTfulAPI.js",
+            "line": 23,
+            "description": "这里是默认首页显示方法。",
+            "itemtype": "method",
+            "name": "首页显示信息",
+            "return": {
+                "description": "Returns hello toma!",
+                "type": "String"
+            },
+            "class": "RESTfulAPI"
+        },
+        {
+            "file": "RESTfulAPI.js",
+            "line": 34,
+            "description": "先是课程信息的方法。",
+            "itemtype": "method",
+            "name": "get /api/courses",
+            "return": {
+                "description": "Returns 课程信息。",
+                "type": "String"
+            },
+            "class": "RESTfulAPI"
+        },
+        {
+            "file": "RESTfulAPI.js",
+            "line": 45,
+            "description": "post信息添加课程信息",
+            "itemtype": "method",
+            "name": "post /api/courses",
+            "return": {
+                "description": "Returns 添加好的课程信息。",
+                "type": "String"
+            },
+            "class": "RESTfulAPI"
+        }
+    ],
+    "warnings": []
+}

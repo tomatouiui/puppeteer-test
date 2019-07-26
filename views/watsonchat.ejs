@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>contact</title>
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/assets/js/jquery.js"></script>
+</head>
+
+<body>
+    <% include partial/nav.ejs %>
+    <main role="main" class="container">
+        <h1 class="mt-5">Watson Chat</h1>
+        <div class="messagediv">
+            <p><strong>bot</strong> : Hello, I’m a customer care virtual assistant to show you the basics. I can help with directions to my store, hours of operation and booking an in-store appointment</p>
+        </div>
+        <input type="text" class="form-control" id="msg" placeholder="message"><br>
+        <button class="btn btn-lg btn-primary btn-block" id="sendbtn" type="button" >send</button>   
+    </main>
+    <% include partial/footer.ejs %>
+    <script type="text/javascript">
+    $(document).ready(function() {
+            $("#msg").keyup(function(event) {
+                if (event.keyCode === 13) {
+                    $("#sendbtn").click();
+                }
+            });
+
+           $('#sendbtn').click(function(){
+               var mm = $('#msg').val();
+               $('#msg').val('');
+               $('.messagediv').append('<p><strong>me</strong> : '+mm+'</p>');
+               $(this).html('send.......');
+               $.ajax({
+                        url: '/api/chat',
+                        type: 'POST',
+                        data:{
+                                msg: mm
+                            },
+                        success: function(data){
+                            console.log("===========================get msg");
+                            //console.log(data);
+                            var newdata = eval (data);
+                            console.log(newdata);
+                            $('#sendbtn').html('send');
+                            $('.messagediv').append('<p><strong>bot</strong> : '+newdata.output.text[0]+'</p>');
+                        }
+                });
+           })
+    });
+    </script>
+</body>
+
+</html>

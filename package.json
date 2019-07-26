@@ -1,0 +1,28 @@
+{
+  "name": "nodetest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "express-mongodb.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "joi": "^14.3.1",
+    "mongodb": "^3.1.10",
+    "mysql": "^2.16.0",
+    "puppeteer": "^1.19.0",
+    "watson-developer-cloud": "^3.18.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-nodemon": "^2.4.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon express-mongodb.js"
+  },
+  "author": "Toma",
+  "license": "ISC"
+}

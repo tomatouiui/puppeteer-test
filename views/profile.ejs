@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>profile</title>
+    <style type="text/css">
+    body {
+        background: skyblue;
+        font-family: verdana;
+        color: #fff;
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 48px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+	<% include partial/nav.ejs %>
+    <h1>hello
+    <%= person %>.</h1>
+    <p>age :
+        <%= info.age %>
+    </p>
+    <p>job :
+        <%= info.job %>
+    </p>
+    <h2>Hobbies</h2>
+    <ul>
+    	<% info.hobbies.forEach(function(item){ %>
+           <li> <%= item %></li>
+    	<% }) %>
+    </ul>
+
+    <h2>Mongodb Result</h2>
+    <ul>
+    	<% result.forEach(function(item){ %>
+           <li> <%= item.name %>:<%= item.url %>:<%= item.type %></li>
+    	<% }) %>
+    </ul>
+    
+</body>
+
+</html>

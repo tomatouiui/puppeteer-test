@@ -19,7 +19,7 @@ const fs = require('fs');
 
     let page = await browser.newPage()
     await page.goto('https://www.google.com/imghp?hl=zh-CN&tab=ri&ogbl')
-    await page.type('input[name=q]', '死库水');
+    await page.type('input[name=q]', '柯南');
     await page.click('.Tg7LZd');
 
     let downloadPath = path.resolve(__dirname, 'download')
